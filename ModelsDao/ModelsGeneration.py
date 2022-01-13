@@ -14,6 +14,7 @@ from sklearn.svm import SVR,SVC
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
+from scipy.stats import shapiro
 
 def buildLinearModel(X,y):
   linear_model = LinearRegression()
@@ -96,6 +97,50 @@ def stem_data(text):
   stop_words = stopwords.words('english')
   stemmed_words = [stem_porter.stem(word) for word in words_list if word not in stop_words]
   return " ".join(stemmed_words)
+
+def plot_features(dataset, feature):
+  plt.figure(figsize=(10,5))
+  plt.legend(feature)
+  sns.distplot(dataset[feature])
+  plt.title("For feature {}".format(feature))
+  plt.show()
+
+def find_outliers(dataset,feature):
+  outliers = []
+  mean = np.mean(dataset[feature])
+  std = np.std(dataset[feature])
+  q1, q3 = np.percentile(dataset,[25,75])
+  IQR = q3- q1
+  lower_bound = q1 - 1.5*IQR
+  upper_bound = q3 + 1.5*IQR
+
+  #check if data is gaussian or not?
+  stats, p = shapiro(dataset[feature])
+
+  for data_value in dataset[feature]:
+    point = (data_value-mean)/std
+
+    if p>.05:
+      if point > 3*std : 
+        outliers.append(data_value)
+    else:
+      if lower_bound > point > upper_bound :
+        outliers.append(data_value)
+
+  print("For the feature {}, there are {} outliers".format(feature,len(outliers)))
+  #print("For the feature {}".format(feature))
+  #print("Mean: {}".format(mean))
+  #print("STD : {}".format(std))
+  #print("Number of outliers: {}".format(len(outliers)))
+  #print("----------")
+
+def plot_cat_features(dataset,feature):
+  plt.figure(figsize=(10,5))
+  sns.catplot(x=feature,y='Loan_Status',data=dataset,kind='point',aspect=2)
+  plt.title("Categorical Plot for {}".format(feature))
+  plt.xlabel(feature)
+  plt.ylabel('Loan_Status')
+  plt.show()
 
 
 
