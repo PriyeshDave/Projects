@@ -10,7 +10,7 @@ This is a multi-class classification problem where we are predicting the severit
 
 based on the other 31 features.
 
-### 🧾Description: 
+### 🧾 Description: 
 This data set is collected from **Addis Ababa Sub-city Police Departments** for master's research work. The data set has been prepared from manual records of road traffic accidents of the year 2017-20. All the sensitive information has been excluded during data encoding and finally it has 32 features and 12316 instances of the accident.
 
 #### :bar_chart: Exploratory Data Anaylysis:
@@ -19,14 +19,14 @@ Exploratory Data Analysis is the first step of understanding your data and acqui
 #### :hourglass: Data Preprocessing:
 The dataset has around 16 features with missing values. This missing values are imputed using **Predictive Imputation** technique where I used the known values to predict the missing values.
 
-#### Handeling data imbalance:
+#### Handeling Data Imbalance:
 The Dataset was quite imbalanced with 10415 records with Slight injury, 1743 records withSerious injury anf just 158 records with Fatal injury.
 I used **SMOTETomek** method for balancing the dataset. 
 
 #### :mag_right: Features Selection:
 On using **Cramer's V** test, I found that some features were moderately correlated so I removed the features with collinearity.
 
-#### Model Training:
+#### ⚙ Model Training:
 On training my model using several classification algorithms, the model trained with **XGBoost Classifier** gave best results with some hyper-parameter tuning. 
 As per the problem statement I used **F1 Score** as the evaluation metric for my model and the model gave the accuracy of **96%**.
 
