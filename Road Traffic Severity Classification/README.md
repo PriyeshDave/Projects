@@ -7,6 +7,7 @@ This is a multi-class classification problem where we are predicting the severit
 * Slight Injury
 * Fatal Injury
 * Serious Injury
+
 based on the other 31 features.
 
 
