@@ -16,9 +16,17 @@ This data set is collected from **Addis Ababa Sub-city Police Departments** for 
 #### Data Preprocessing:
 The dataset has around 16 features with missing values. This missing values are imputed using **Predictive Imputation** technique where I used the known values to predict the missing values.
 
-#### Handeling imbalance in dataset:
+#### Handeling data imbalance:
 The Dataset was quite imbalanced with 10415 records with Slight injury, 1743 records withSerious injury anf just 158 records with Fatal injury.
 I used **SMOTETomek** method for balancing the dataset. 
+
+#### Features Selection:
+On using **Cramer's V** test, I found that some features were moderately correlated so I removed the features with collinearity.
+
+#### Model Training:
+On training my model using several classification algorithms, the model trained with **XGBoost Classifier** gave best results with some hyper-parameter tuning. 
+As per the problem statement I used **F1 Score** as the evaluation metric for my model and the model gave the accuracy of **96%**.
+
 
 
 
