@@ -28,7 +28,7 @@ On using **Cramer's V** test, I found that some features were moderately correla
 
 ### ⚙ Model Training:
 On training my model using several classification algorithms, the model trained with **XGBoost Classifier** gave best results with some hyper-parameter tuning. 
-As per the problem statement I used **F1 Score** as the evaluation metric for my model and the model gave the accuracy of **96%**.
+As per the problem statement I used **F1 Score** as the evaluation metric for my model with model accuracy of **96%**.
 
 
 
