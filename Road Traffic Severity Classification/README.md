@@ -10,5 +10,10 @@ This is a multi-class classification problem where we are predicting the severit
 
 based on the other 31 features.
 
+### 🧾Description: 
+This data set is collected from **Addis Ababa Sub-city Police Departments** for master's research work. The data set has been prepared from manual records of road traffic accidents of the year 2017-20. All the sensitive information has been excluded during data encoding and finally it has 32 features and 12316 instances of the accident. Then it is preprocessed and for identification of major causes of the accident by analyzing it using different machine learning classification algorithms. 
+
+
+
 
 
