@@ -29,7 +29,8 @@ This data set is collected from **Addis Ababa Sub-city Police Departments** for 
 ### ⚙ Model Training:
 * On training my model using several classification algorithms, the model trained with **XGBoost Classifier** gave best results with some hyper-parameter tuning. 
 * Also, I found that my baseline model (XgBoost Classifier) was overfitting the dataset. On investigation I found that the dataset was affected by **Curse of Dimensionality**. So I reduced the dimensions and trained my model again.
-* As per the problem statement I used **F1 Score** as the evaluation metric for my model with model accuracy of **100%**.
+* After retraining my model, I found that it was generalizing well with an accuracy of **100%**
+.* As per the problem statement I used **F1 Score** as the evaluation metric for my model.
 
 
 
