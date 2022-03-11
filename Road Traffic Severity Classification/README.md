@@ -20,15 +20,16 @@ based on the other 31 features.
 * The dataset has around 16 features with missing values. This missing values are imputed using **Predictive Imputation** technique where I used the known values to predict the missing values.
 
 ### ⚖ Handeling Data Imbalance:
-The Dataset was quite imbalanced with 10415 records with Slight injury, 1743 records withSerious injury anf just 158 records with Fatal injury.
-I used **SMOTETomek** method for balancing the dataset. 
+* The Dataset was quite imbalanced with 10415 records with Slight injury, 1743 records withSerious injury anf just 158 records with Fatal injury.
+* I used **SMOTETomek** method for balancing the dataset. 
 
 ### :mag_right: Features Selection:
-On using **Cramer's V** test, I found that some features were moderately correlated so I removed the features with collinearity.
+* On using **Cramer's V** test, I found that some features were moderately correlated so I removed the features with collinearity.
 
 ### ⚙ Model Training:
-On training my model using several classification algorithms, the model trained with **XGBoost Classifier** gave best results with some hyper-parameter tuning. 
-As per the problem statement I used **F1 Score** as the evaluation metric for my model with model accuracy of **100%**.
+* On training my model using several classification algorithms, the model trained with **XGBoost Classifier** gave best results with some hyper-parameter tuning. 
+* Also, I found that my baseline model (XgBoost Classifier) was overfitting the dataset. On investigation I found that the dataset was affected by **curse of dimensionality**. So I reduced the dimensions and trained my model again.
+* As per the problem statement I used **F1 Score** as the evaluation metric for my model with model accuracy of **100%**.
 
 
 
