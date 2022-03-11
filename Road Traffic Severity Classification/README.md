@@ -11,7 +11,7 @@ This is a multi-class classification problem where we are predicting the severit
 based on the other 31 features.
 
 ## 🧾 Description: 
-* This data set is collected from **Addis Ababa Sub-city Police Departments** for master's research work. The data set has been prepared from manual records of road traffic accidents of the year 2017-20. All the sensitive information has been excluded during data encoding and finally it has 32 features and 12316 instances of the accident.
+This data set is collected from **Addis Ababa Sub-city Police Departments** for master's research work. The data set has been prepared from manual records of road traffic accidents of the year 2017-20. All the sensitive information has been excluded during data encoding and finally it has 32 features and 12316 instances of the accident.
 
 ### :bar_chart: Exploratory Data Anaylysis:
 * Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge. 
@@ -28,7 +28,7 @@ based on the other 31 features.
 
 ### ⚙ Model Training:
 * On training my model using several classification algorithms, the model trained with **XGBoost Classifier** gave best results with some hyper-parameter tuning. 
-* Also, I found that my baseline model (XgBoost Classifier) was overfitting the dataset. On investigation I found that the dataset was affected by **curse of dimensionality**. So I reduced the dimensions and trained my model again.
+* Also, I found that my baseline model (XgBoost Classifier) was overfitting the dataset. On investigation I found that the dataset was affected by **Curse of Dimensionality**. So I reduced the dimensions and trained my model again.
 * As per the problem statement I used **F1 Score** as the evaluation metric for my model with model accuracy of **100%**.
 
 
