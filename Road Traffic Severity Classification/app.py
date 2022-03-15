@@ -8,7 +8,7 @@ from prediction import *
 model = joblib.load('Model/finalModel_xgb.pkl')
 
 st.set_page_config(page_title="Accident Severity Prediction App",
-                   page_icon="🚧", layout="wide")
+                   page_icon="🚦", layout="wide")
 
 
 #creating option list for dropdown menu
@@ -130,13 +130,19 @@ def main():
        # ]).reshape(1,-1)
 
        data1 = np.array([driving_experience, sex, driver_age, educational_level, Time]).reshape(1,-1)
-       data2 = np.array([day_of_week, owner_of_vehicle, accident_area, Lanes_or_Medians, road_allignment, Types_of_Junction, Road_surface_type,
-       Road_surface_conditions, Light_conditions, Weather_conditions, Type_of_collision, Number_of_vehicles_involved, Number_of_casualties,
-       Vehicle_movement, Pedestrian_movement, Cause_of_accident]).reshape(1,-1)
+       data2 = np.array([Number_of_vehicles_involved, Number_of_casualties]).reshape(1,-1)
+       data3 = np.array([day_of_week, owner_of_vehicle, accident_area, Lanes_or_Medians, road_allignment, Types_of_Junction, Road_surface_type,
+       Road_surface_conditions, Light_conditions, Weather_conditions, Type_of_collision, Vehicle_movement, Pedestrian_movement, Cause_of_accident])
 
-       pred = get_prediction(data1, data2, model=model)
+       pred = get_prediction(data1, data2, data3, model=model)
 
-       st.write(f"The predicted severity is:  {pred[0]}")
+       if pred == 'Slight injury':
+              st.write('Thank God! It was a Slight Injury!')
+       elif pred == 'Serious Injury':
+              st.write('It seems like Serious Injury!')
+       else:
+              st.write('OMG it\'s a Fatal Injury. Hope the driver recovers fast.')
+       #st.write(f"The predicted severity is:  {pred}")
 
 if __name__ == '__main__':
     main()
