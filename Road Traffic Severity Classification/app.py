@@ -5,7 +5,7 @@ import joblib
 from sklearn.ensemble import RandomForestClassifier
 from prediction import *
 
-model = joblib.load(r'Model/finalModel_xgb')
+model = joblib.load('Model/finalModel_xgb.pkl')
 
 st.set_page_config(page_title="Accident Severity Prediction App",
                    page_icon="🚧", layout="wide")
@@ -116,8 +116,8 @@ def main():
     if submit:
        Time = encodeTime(hour)
        sex = encodeSex(sex)
-       educational_level = encodeEdu(educational_level, options_educational_level)
-       driving_experience = encodeDrivingExp(driving_experience, options_driver_exp) 
+       educational_level = encodeEdu(educational_level)
+       driving_experience = encodeDrivingExp(driving_experience) 
        driver_age = encodeAgeBand(driver_age)
 
        # data = np.array([Time, day_of_week, driver_age, sex,
@@ -129,10 +129,10 @@ def main():
        # Vehicle_movement, Pedestrian_movement, Cause_of_accident,
        # ]).reshape(1,-1)
 
-       data1 = np.array([driving_experience, sex, driver_age, educational_level, Time])
+       data1 = np.array([driving_experience, sex, driver_age, educational_level, Time]).reshape(1,-1)
        data2 = np.array([day_of_week, owner_of_vehicle, accident_area, Lanes_or_Medians, road_allignment, Types_of_Junction, Road_surface_type,
        Road_surface_conditions, Light_conditions, Weather_conditions, Type_of_collision, Number_of_vehicles_involved, Number_of_casualties,
-       Vehicle_movement, Pedestrian_movement, Cause_of_accident])
+       Vehicle_movement, Pedestrian_movement, Cause_of_accident]).reshape(1,-1)
 
        pred = get_prediction(data1, data2, model=model)
 

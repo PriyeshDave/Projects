@@ -8,7 +8,7 @@ def get_prediction(data1, data2, model):
   """
   Predict the class of a given data point.
   """
-  mapped_cols = ['Driving_experience', 'Sex_of_driver', 'Age_band_of_driver', 'Educational_level', 'Time', 'Accident_severity']
+  mapped_cols = ['Driving_experience', 'Sex_of_driver', 'Age_band_of_driver', 'Educational_level', 'Time']
   colsToMap = ['Day_of_week', 'Owner_of_vehicle', 'Area_accident_occured',
        'Lanes_or_Medians', 'Road_allignment', 'Types_of_Junction',
        'Road_surface_type', 'Road_surface_conditions', 'Light_conditions',
