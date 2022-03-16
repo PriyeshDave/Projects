@@ -4,6 +4,8 @@ import numpy as np
 import joblib
 from sklearn.ensemble import RandomForestClassifier
 from prediction import *
+from PIL import Image
+
 
 model = joblib.load('Model/finalModel_xgb.pkl')
 
@@ -81,7 +83,9 @@ features = ['Time', 'Day_of_week', 'Age_band_of_driver', 'Sex_of_driver',
        ]
 
 
-st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App 🚧</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App 🚧🚦</h1>", unsafe_allow_html=True)
+image = Image.open('RTA.jpg')
+st.image(image, caption='RTA')
 def main():
     with st.form('prediction_form'):
 
