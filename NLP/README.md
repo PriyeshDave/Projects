@@ -17,4 +17,4 @@ The word cloud consists of positive and negative words in the texts
 <img width="350" align ="left" alt="positive-sentiments" src="https://user-images.githubusercontent.com/81012989/159269353-e922cbd2-b3dd-4e16-9d54-2817bbd10644.png">
 
 * Negative Sentiments
-<img width="355" align='right" alt="negative-sentiments" src="https://user-images.githubusercontent.com/81012989/159269374-5b99dc3a-0020-40d4-81a5-5f29aca929ac.png">
+<img width="355" align="right" alt="negative-sentiments" src="https://user-images.githubusercontent.com/81012989/159269374-5b99dc3a-0020-40d4-81a5-5f29aca929ac.png">
