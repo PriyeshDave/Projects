@@ -22,3 +22,4 @@ The word cloud consists of positive and negative words in the texts
 ### Web Application :computer: :earth_americas: : 
 Built a web application using Streamlit and deployed on Heroku.
 
+<img width="451" alt="image" src="https://user-images.githubusercontent.com/81012989/159292592-756f3f43-b58c-4d1f-86d7-18faac38ee84.png">
