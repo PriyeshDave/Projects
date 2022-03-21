@@ -18,3 +18,8 @@ The word cloud consists of positive and negative words in the texts
 
 * Negative Sentiments
 <img width="355" alt="negative-sentiments" src="https://user-images.githubusercontent.com/81012989/159269374-5b99dc3a-0020-40d4-81a5-5f29aca929ac.png">
+
+### Web Application :computer: :earth_americas: : 
+Built a web application using Streamlit and deployed on Heroku.
+<img width="451" alt="image" src="https://user-images.githubusercontent.com/81012989/159292294-d140c48f-7bfc-4526-a50f-fc5b57fa2f42.png">
+
