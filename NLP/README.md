@@ -29,5 +29,26 @@ Built a web application using Streamlit and deployed on Heroku.
 ### 🧭 Problem Statement:
 The term fake news has become a buzz word these days.There was a time when if anyone needed any news, he or she would wait for the next-day newspaper. However, with the growth of online newspapers who update news almost instantly, people have found a better and faster way to be informed of the matter of his/her interest. Nowadays social-networking systems, online news portals, and other online media have become the main sources of news through which interesting and breaking news are shared at a rapid pace. However, many news portals serve special interest by feeding with distorted, partially correct, and sometimes imaginary news that is likely to attract the attention of a target group of people. Fake news has become a major concern for being destructive sometimes spreading confusion and deliberate disinformation among the people.
 
-The Aims of this projects is to use the Natural Language Processing and Machine learning to detect the Fake news based on the text content of the article.
+The aim of this projects is to use the Natural Language Processing and Machine learning to detect fake news based on the text content of the article.
+
+
+### 🧾 Description:
+This data set is collected from **Kaggle**. The data set has 20,800 news records with collection of real and fake news. It contains 5 columns (id, title, author, text and label) where text is the news that were are predicting upon and label has values as 0 or 1 where
+* 0 -> Real news
+* 1 -> Fake news.
+
+#### 📊 Exploratory Data Anaylysis:
+Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge.
+
+#### ⌛ Data Preprocessing:
+* Text columns is selected as the independent columns while label as the target dependent variable. All rest of the features were dropped.
+* The text column was cleaned by removing the special and numerics characters if any in the text. I used python's **re** library to do this.
+* After cleaning the text, the **stopwords** were removed from the sentences.
+* After removing the stopwords, the sentences were stemmed by converting the words to their root words. I used nltk's **PorterStemmer** to achieve this.
+* Post stemming, word vectorization was done using **TFIDF** vectorization.
+
+#### ⚙ Model Training:
+* Once the data is preprocessed, I used Logistic Regressor and fit it on the vectorized dataset.
+* The model was trained with an accuracy of **98.5%** on training set and **97%** on the test set.
+
 
