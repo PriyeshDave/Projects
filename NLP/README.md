@@ -38,7 +38,7 @@ This data set is collected from **Kaggle**. The data set has 20,800 news records
 * 1 -> Fake news.
 
 #### 📊 Exploratory Data Analysis:
-Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge.
+* Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge.
 
 #### ⌛ Data Preprocessing:
 * Text columns is selected as the independent columns while label as the target dependent variable. All rest of the features were dropped.
