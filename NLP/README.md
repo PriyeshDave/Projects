@@ -37,7 +37,7 @@ This data set is collected from **Kaggle**. The data set has 20,800 news records
 * 0 -> Real news
 * 1 -> Fake news.
 
-#### 📊 Exploratory Data Anaylysis:
+#### 📊 Exploratory Data Analysis:
 Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge.
 
 #### ⌛ Data Preprocessing:
